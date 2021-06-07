@@ -1,0 +1,30 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        A5 - Selection  
+        Asks the user for the package weight and returns the shipping charge
+    -->
+    <head>
+        <title>Shipping Charges</title>
+    </head>
+    <body>
+        <script>
+            //ask the user to eter the weight of a package
+            var weight = parseFloat(prompt("What is the weight of the package?"));
+            if(weight<=2){
+                //2 pounds or less      Rate per Pound ($1.10)
+                //displays the shipping charges (weight * shipping)
+                document.write("The shipping charges are $" + (weight*1.10));
+            }if(weight>2 && weight <=6){
+                //Over 2 pounds but not more than 6 pounds       Rate per Pound ($2.20)
+                document.write("The shipping charges are $" + (weight*2.20));
+            }if(weight>6 && weight <=10){
+                //Over 6 pounds but not more than 10 pounds     Rate per Pound ($3.70)
+                document.write("The shipping charges are $" + (weight*3.70));
+            }if(weight>10){
+                //Over 10 pounds        Rate per Pound ($3.80)
+                document.write("The shipping charges are $" + (weight*3.80));
+            }
+        </script>
+    </body>
+</html>

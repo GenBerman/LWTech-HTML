@@ -1,0 +1,16 @@
+<html>
+    <!-- Benjamin Rawald
+         A2 - IPO
+         Program 2: Temperature Converter -->
+    <head>
+        <title>Temperature Converter</title>
+    </head>
+    <body>
+        <script>
+            //ask and take given fahrenhiet, because its needed in decimal, take it in decimal. 
+            var Fahrenhiet=parseFloat(prompt("Please enter a temperature in Fahrenheit: "));
+            var Kelvin=(Fahrenhiet+459.67)*(5/9);
+            document.write("The Temperature converted to Kelvin is: "+ Kelvin.toFixed(2) + "°K");
+        </script>
+    </body>
+</html>

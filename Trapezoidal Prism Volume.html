@@ -1,0 +1,30 @@
+<html>
+    <!-- Benjamin Rawald
+         A2 - IPO
+         Program 3: Trapezoidal Prism Volume -->
+    <head>
+        <title>Trapezoidal Prism Volume</title>
+    </head>
+    <body>
+        <script>
+            var length = parseFloat(prompt("What is the Length of the Trapezoidal Prism?"));
+            var height = parseFloat(prompt("What is the Height of the Trapezoidal Prism?"));
+            var basewidth = parseFloat(prompt("What is the Base Width of the Trapezoidal Prism?"));
+            var topwidth = parseFloat(prompt("What is the Top Width of the Trapezoidal Prism?"));
+            document.write("With the given values: length = "+ length +", height = "+ height + ", Base Width ="+ basewidth + ", and Top Width = "+ topwidth +"<br/>");
+            //Volume = L x H X [(P+Q)/2]
+            // length = L, height = H, Base width = P, Top width = Q
+            var volume = length * height *((basewidth+topwidth)/2);
+            document.write("The Volume of the Trapezoidal Prism is: " + volume + "<br/>");
+            //calculate the volume again with 25% reduction (times by 0.75)
+            var rlength = (length*0.75);
+            var rheight = (height*0.75);
+            var rbasewidth = (basewidth*0.75);
+            var rtopwidth = (topwidth*0.75);
+            var rvolume = rlength * height * ((rbasewidth+rtopwidth)/2);
+            document.write("With the reduced values of: length = "+ rlength +", height = "+ rheight + ", Base Width = "+ rbasewidth + ", and Top Width = "+ rtopwidth +"<br/>");
+            var rvolume = rlength * height * ((rbasewidth+rtopwidth)/2);
+            document.write("The Reduced Volume of the Trapezoidal Prism is: "+ rvolume);
+        </script>
+    </body>
+</html>

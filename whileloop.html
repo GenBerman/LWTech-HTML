@@ -1,0 +1,35 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        Final Program 1
+        This program prints the kelvin temperatures for each Celsius Temperature value ranging from 0 to 50.
+    -->
+    <head>
+        <title>While Loop</title>
+        <h1>While Loop</h1>
+    </head>
+    <body>
+        <script>
+            //do not use an array and toString( )
+            var Celsius_Tempurature=0;
+            var Kelvin_Temperature=0;
+            var count=0;
+            document.write("["); //need to print the opening brackett.
+            /*
+            This while loop generates the kelvin temperatures and prints them, 
+            and stops once the celsius temperature reaches 50 degrees.
+            */
+            while(count<=50){ //a while-loop NOT a for-loop
+                Kelvin_Temperature=Celsius_Tempurature + 273.15;   //tk=tc+273.15
+                if(count==50){
+                    document.write(Kelvin_Temperature + "]")
+                }else{
+                    document.write(Kelvin_Temperature + ", ")
+                }
+                count +=5;
+                Celsius_Tempurature+=5;
+            } 
+
+        </script>
+    </body>
+</html>

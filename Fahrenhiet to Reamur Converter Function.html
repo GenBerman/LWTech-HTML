@@ -1,0 +1,27 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        A3 - Functions
+        Program 1: Fahrenheit to Reaumur Converter Function
+    -->
+    <head>
+        <title>Fahrenheit to Reaumur Converter Function</title>
+        <script>
+            function FR_converter(tf){
+                //T reaumur = (T fahrenhiet - 32) x (4/9)
+                var tr=(tf - 32) * (4/9); //the variable is local, not global
+                document.write("The Temperature converted to Réaumur is: "+ tr.toFixed(2));
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            //ask for F temp
+            var tf=parseFloat(prompt("Please the Fahrenheit Temperature:"));
+            //output the value given by the user
+            document.write("The given Fahrenheit Temperature is: " + tf.toFixed(2) + "<br/>");
+            //call function
+            FR_converter(tf);
+        </script>
+    </body>
+</html>

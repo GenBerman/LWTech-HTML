@@ -1,0 +1,36 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        Assignment 7 Program 1
+        This program reads the n value from the user and calculates the total Fraction Sum Order of n.
+        It then prints the original value of n and the result to the page. 
+    -->
+    <head>
+        <title>Functions That Return a Value</title>
+        <h1>Fraction Sum of Order n</h1>
+        <script>
+            var count = 0; //don't need a global variable
+            var total = 0; //don't need a global variable
+            /*
+            This function collects the value n as a parameter and applies 
+            the Fraction Sum Order and prints the original value of n and 
+            the newly calculated Fraction Sum Order total value.
+             */
+            function fractionSum(n){
+                while(count<=n && (n-count)>=1){
+                    total += (1/(n-count));
+                    count++;
+                }
+                document.write("The fraction sum of order " + n + " is " + total.toFixed(2));
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            //collect the value of n from the user
+            var n = parseFloat(prompt("Enter the value of n:"));
+            //call the function and send the value of n
+            fractionSum(n);
+        </script>
+    </body>
+</html>

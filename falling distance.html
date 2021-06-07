@@ -1,0 +1,26 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        MidTerm   
+        Calculates the distance an object has fallen by the amount of time the object fell
+    -->
+    <head>
+        <script>
+            function falling_distance(time){
+                //d = (1/2) * g * T^2
+                //d is the distance, g is 9.8, and t is the amount of time
+                var distance = (1/2) * (9.8) * (time*time);
+                //rather than create another variable g, just use the constant value fo 9.8
+                document.write(distance);
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            //ask for the time value from the user
+            var time = parseFloat(prompt("What is the amount of time the object has fallen?"));
+            //send the time value to the function
+            falling_distance(time);
+        </script>
+    </body>
+</html>

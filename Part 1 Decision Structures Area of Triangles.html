@@ -1,0 +1,35 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        A5 - Selection
+        Ask for the height and base of two triangles and tells the user which has the larger area
+    -->
+    <head>
+        <title>Area of Triangles</title>
+    </head>
+    <body>
+        <script>
+            //ask for the base and height of two triangles
+            //collect first triangle values
+            var base1 = parseFloat(prompt("What is the base of your first triangle?"));
+            var height1 = parseFloat(prompt("What is the height of your first triangle?"));
+            //collect second triangle values
+            var base2 = parseFloat(prompt("What is the base of your second triangle?"));
+            var height2 = parseFloat(prompt("What is the height of your second triangle?"));
+            //calculate the two triangles area
+            //A = (height * base) / 2
+            //calculate the area of the first triangle
+            var area1 = (height1 * base1)/2;
+            //calculate the area of the second triangle
+            var area2 = (height2 * base2)/2;
+            //determine which triangle has the greater area, or if the areas are the same.
+            if(area1>area2){
+                document.write("The area of the first triangle is greater than the area of the second triangle.")
+            }if(area1<area2){
+                document.write("The area of the second triangle is greater than the area of the first triangle.")
+            }if(area1==area2){
+                document.write("The area of the first triangle is equal to the area of the second triangle.")
+            }
+        </script>
+    </body>
+</html>

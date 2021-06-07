@@ -1,0 +1,27 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        A3 - Functions   
+        Program 2: Cone Volume Function
+    -->
+    <head>
+        <title>Cone Volume Function</title>
+        <script>
+            function coneVolume(height, radius){
+                // Cone Volume = (1/3)*pi*radius squared*height
+                var conev = ((1/3)*3.14*(radius*radius)*height);
+                // Unsure if allowed to use Math.PI or pow( ), so I didn't
+                document.write("The Volume of the Cone is: " + conev.toFixed(2));
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            //ask for height and radius of the cone
+            var height = parsefloat(prompt("Please enter the height of the cone:"));
+            var radius = parsefloat(prompt("Please enter the radius of the cone:"));
+            //call function with height and radius
+            coneVolume(height, radius);
+        </script>
+    </body>
+</html>

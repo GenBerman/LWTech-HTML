@@ -1,0 +1,27 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        A6 - Loops 
+        A while-loop creates a table of celcius temperatures and their fahrenhiet equivalents. 
+    -->
+    <head>
+        <title>Celcius to Fahrenhiet Table</title>
+    </head>
+    <body>
+        <table border="5">
+            <th>Celcius to Fehrenhiet</th>
+            <tr>
+                <td>Celcius</td><td>Fahrenheit</td>
+            </tr>
+            <script>
+                //create a loop (that loops 21 times) that creates a new row each loop
+                var celciusTemp = 0; //don't know if while(var celciusTemp=0; celciusTemp<=20) would be approved.
+                while(celciusTemp<=20){ // loops 21 times
+                    //code that adds a row to a table with the fahreinhiet equivalent
+                    document.write("<tr><td>" + celciusTemp + "°C </td><td>" + (((9/5)*celciusTemp)+32).toFixed(2) + "°F </td></tr>");
+                    celciusTemp++; //increase the celciusTemp for the next loop
+                }
+            </script>
+        </table>
+    </body>
+</html>

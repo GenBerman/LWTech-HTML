@@ -1,0 +1,35 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        A6 - Loops 
+        Collects the number of work days, and prints the daily pay and the total pay.
+    -->
+    <head>
+        <title>Pennies for Pay</title>
+        <h1>Pennies for Pay</h1>
+    </head>
+    <body>
+        <table border="5"> <!--Create a table that looks the number of days adding to the total pay-->
+            <!--get a table outline for cleanliness-->
+            <script>
+                var days=parseInt(prompt("How many days have you worked?"));
+                var totalpay = 0; //don't need it to equal zero, just don't need global variable.
+                var count = 1;
+                var dailypay = 0.01;
+                //insert Day # and Day Pay headers
+                document.write("<tr><th> Day# </th><th> Day Pay </th></tr>");
+                while(count<=days){ 
+                    document.write("<tr><td>" + count + "</td><td> $" + dailypay.toFixed(2) + "</td></tr>");
+                    count++; //increase the displayed day value
+                    totalpay += dailypay; //adds the day's payment to the total payment
+                    dailypay = dailypay*2; // the assignment operator *= didn't want to work. 
+                }
+            </script>
+        </table>
+            <!--it doesn't want the total pay inside the table-->
+            <script>
+                //"Total pay is $" + totalpay.toFixed(2)
+                document.write("<h2> Total pay is $" + totalpay.toFixed(2) + "</h2>");
+            </script>
+    </body>
+</html>

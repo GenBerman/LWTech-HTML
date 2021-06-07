@@ -1,0 +1,32 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        MidTerm   
+        Calculates the state, county and total sales tax of a purchase.
+    -->
+    <head>
+        <title>Taxes</title>
+    </head>
+    <body>
+        <script>
+            //ask the user to enter the amounf of a purchase
+            var cost = parseFloat(prompt("What is the amount of Purchase? ($)"));
+            //compute the state (4%) and county (2%) sales tax
+            //want to set state and county sales tax rates as constants
+            const staterate = 0.04;
+            const countyrate = 0.02;
+            var statetax = cost * staterate; //state tax calculated
+            var countytax = cost * countyrate; // county tax calculated
+            //compute the total sales tax (state + county tax)
+            var totaltax = statetax + countytax; //total sales tax calculated
+            // compute the total amount of sale (the sum of the amount of purchase plus total sales tax)
+            var totalcost = cost + totaltax;
+            //display the amount of the purchase, the state sales tax, the county sales tax
+            //and the total of the sale*
+            document.write("The amount of purchase is: " + cost + "<br/>");
+            document.write("The amount of State Sales Tax is: " + statetax + "<br/>");
+            document.write("The amount of County Sales Tax is: " + countytax + "<br/>");
+            document.write("The Total of the Sale is: " + totalcost);
+        </script>
+    </body>
+</html>

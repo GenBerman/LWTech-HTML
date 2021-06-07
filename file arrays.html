@@ -1,0 +1,64 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        Final Program 2
+        This program collects 20 values from the user, and prints the lowest number, 
+        the highest number, the average of the numbers, and the amount of numbers that
+        are above that average. 
+    -->
+    <head>
+        <title>File Arrays</title>
+        <h1>File Arrays</h1>
+        <!--No functions-->
+    </head>
+    <body>
+        <script>
+            
+            var series_count = 0;
+            var series = new Array (20);
+            /* 
+            This while-loop accepts the 20 numbers from the user
+            and stores the numbers in an array.
+            */
+            while(series_count<20){
+                var num = parseFloat(prompt("What is the number?"));
+                series[series_count] = num;
+                series_count++;
+            }
+
+            var lowest = 0;
+            var highest = 0;
+            var total = 0;
+            var count = 0;
+            /* 
+            This while-loop determines what the loest number is, what the highest number is and 
+            collects the total of the numbers to later calculate the average. 
+            */
+            while(count<series.length){
+                if(count == 0){
+                    lowest = series[count];
+                }else if(series[count]<lowest){ //lowest calculated
+                    lowest = series[count]
+                }else if(series[count]>highest){ //highest calculated
+                    highest = series[count];  
+                }
+                total += series[count];
+                count++;
+            }
+            var average = (total/series.length); //Average calculated
+            var average_count = 0;
+            var above_average = 0;
+            while(average_count<series.length){
+                if(series[average_count]>average){ //above average calcalculated
+                    above_average++;
+                }
+                average_count++;
+            }
+            //print to the page
+            document.write("The lowest number in the array is: " + lowest + "<br/>");
+            document.write("The highest number is the array is: " + highest+ "<br/>");
+            document.write("The average of the numbers in the array is: " + average+ "<br/>");
+            document.write(above_average + " are above average");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <!-- 
+        Benjamin Rawald
+        Final Program 4
+        This program determines what values are multiple of nine and
+        add their cubed sum together and prints to the page. 
+    -->
+    <head>
+        <title>Functions</title>
+        <h1>Functions</h1>
+        <script>
+            /*
+            This Function determines what valus in the array are  multiples of 9
+            and add their cubed sum together, and print to the document. 
+            */
+            function mysterySum(array){
+                var sum = 0;
+                /*
+                This for loop determines what is a multiple of nine and 
+                adds the cube of the value to the sum.
+                */
+                for(var count=0;count<array.length;count++){
+                    if(array[count] % 9 == 0){
+                        sum += Math.pow(array[count],3);
+                    }
+                }
+                document.write("Mystery Sum = " + sum)
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var values = [2,9,17,27,31,54,81,93,100];
+            mysterySum(values);
+        </script>
+    </body>
+</html>
